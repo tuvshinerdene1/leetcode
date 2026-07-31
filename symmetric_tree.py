@@ -22,3 +22,29 @@ class Solution:
 
             return (t1.val == t2.val) and isMirror(t1.left, t2.right) and isMirror(t1.right, t2.left)
         return isMirror(root.left, root.right)
+
+# from collections import deque
+
+# class Solution:
+#     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+#         if not root:
+#             return True
+        
+#         # Use a queue to store pairs of nodes that should be mirrors
+#         queue = deque([(root.left, root.right)])
+        
+#         while queue:
+#             t1, t2 = queue.popleft()
+            
+#             if not t1 and not t2:
+#                 continue
+#             if not t1 or not t2:
+#                 return False
+#             if t1.val != t2.val:
+#                 return False
+            
+#             # Add corresponding children pairs to the queue for comparison
+#             queue.append((t1.left, t2.right))
+#             queue.append((t1.right, t2.left))
+            
+#         return True
