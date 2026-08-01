@@ -7,6 +7,7 @@
 #             return False
 #         current = current / 2
 #     return True
+
 def isPowerOfTwo(n:int) -> bool:
     if n<=0:
         return False
